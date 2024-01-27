@@ -38,7 +38,8 @@
                     :class="index === currentImage ? `active`: ` ` ">
                         <img
                         @click="imageClick(index)"
-                        
+                        @mouseover="timerPause"
+                        @mouseleave="timerStart"
                         :src="slide.image" 
                         :alt= "slide.title" />
                     </div>

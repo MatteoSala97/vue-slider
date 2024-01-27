@@ -29,6 +29,7 @@ const {createApp} = Vue
         data(){
             return {
                 currentImage: 0,
+                timerInverval: null,
                 slides : [
                     {
                         image: './assets/img/01.webp',
@@ -55,7 +56,7 @@ const {createApp} = Vue
             }
         },
         created(){
-            let timerInverval = setInterval(this.nextImage, 3000)
+            this.timerInverval = setInterval(this.nextImage, 500)
         },
         methods: {
             nextImage(){
@@ -73,6 +74,14 @@ const {createApp} = Vue
             },
             imageClick(index){
               this.currentImage = index
+            },
+
+            timerPause(){
+                clearInterval(this.timerInverval)
+            },
+            
+            timerStart(){
+                this.timerInverval = setInterval(this.nextImage, 500)
             }
         }
     }).mount("#app")
