@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevImage"></div>
+                    <div class="next" @click="nextImage"></div>
                     <div class="thumb active">
                         <img 
                         v-for=" (slide, index) in slides" 

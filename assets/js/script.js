@@ -58,6 +58,21 @@ const {createApp} = Vue
                         }
                     ]
             }
+        },
+        methods: {
+            nextImage(){
+                this.currentImage = this.currentImage + 1
+                if(this.currentImage > this.slides.length - 1){
+                    this.currentImage = 0
+                }
+            },
+            prevImage(){
+                this.currentImage = this.currentImage - 1
+                if(this.currentImage < 0){
+                    this.currentImage = this.slides.length - 1
+                }
+
+            },
         }
     }).mount("#app")
 
