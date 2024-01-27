@@ -56,7 +56,7 @@ body{
 }
 
 .thumb.active {
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     opacity: 1;
 }
 

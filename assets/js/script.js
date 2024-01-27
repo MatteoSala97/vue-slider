@@ -23,11 +23,6 @@
 // ]
 
 // console.log(slides)
-
-
-
-
-
 const {createApp} = Vue
 
     createApp({
@@ -58,6 +53,9 @@ const {createApp} = Vue
                         }
                     ]
             }
+        },
+        created(){
+            let timerInverval = setInterval(this.nextImage, 3000)
         },
         methods: {
             nextImage(){
