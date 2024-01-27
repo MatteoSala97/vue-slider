@@ -73,6 +73,9 @@ const {createApp} = Vue
                 }
 
             },
+            imageClick(index){
+              this.currentImage = index
+            }
         }
     }).mount("#app")
 

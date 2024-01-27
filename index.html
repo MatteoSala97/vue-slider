@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
+
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -33,7 +34,8 @@
                     <div class="prev" @click="prevImage"></div>
                     <div class="next" @click="nextImage"></div>
                     <div class="thumb active">
-                        <img 
+                        <img
+                        @click="imageClick(index)"
                         v-for=" (slide, index) in slides" 
                         :src="slide.image" 
                         :alt= "slide.title" />
